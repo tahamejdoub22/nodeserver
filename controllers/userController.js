@@ -128,7 +128,6 @@ const updatepoint = async (req, res) => {
 
         res.json({
             points: updatedUser.points,
-            token: generateToken(updatedUser._id)
         })
 
     } else {

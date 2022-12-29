@@ -2,7 +2,6 @@ const Materiel = require('../models/MaterielModel');
 const typeModel = require('../models/typeModel');
 const UserModel = require('../models/UserModel');
 const eventModel = require('../models/eventModel');
-
 // @desc -> Add event
 const addevent = async (req, res, next) => {
     try {

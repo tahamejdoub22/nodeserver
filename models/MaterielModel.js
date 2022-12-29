@@ -4,7 +4,13 @@ const materialSchema = new mongoose.Schema({
     materielName: String,
     matrielImage: String,
     description:String,
-    Like:Boolean,
+    status:{
+    type: 'string',
+    required: true,
+    default: ["Recycled","waiting"],
+
+   
+},
     type: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Type'
@@ -19,5 +25,4 @@ const materialSchema = new mongoose.Schema({
     }
 
 });
-
 module.exports = mongoose.model('Materiel', materialSchema);

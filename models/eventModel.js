@@ -16,5 +16,4 @@ img: {
     ref: 'SingleFile'
 }
 });
-
 module.exports = mongoose.model('event', EventSchema);

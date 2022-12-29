@@ -21,6 +21,4 @@ router.route('/getByType/:catId').get(getMaterielByType);
 
 router.route('/deleteMateriel/:materielId').delete(protect, deleteMaterielById);
 router.route('/editMateriel/:materielId').put(protect, editmateriel);
-
-
 module.exports = router;

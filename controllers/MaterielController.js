@@ -14,7 +14,7 @@ function get_random (list) {
 // @desc -> Add materiel
 const addmateriel = async (req, res, next) => {
     try {
-        const { materielName, matrielImage,type,description,Like,user} = req.body;
+        const { materielName, matrielImage,type,description,status,user} = req.body;
 
         const materiel = await Materiel.findOne({ materielName: materielName });
 
@@ -25,7 +25,7 @@ const addmateriel = async (req, res, next) => {
             });
         }
 
-        const new_materiel = await Materiel.create({ materielName,matrielImage,type,description,Like,user });
+        const new_materiel = await Materiel.create({ materielName,matrielImage,type,description,status,user });
 
         res.status(200).json({
              new_materiel
@@ -127,7 +127,7 @@ const getSlidermateriel = async (req, res, next) => {
     try {
         const user = await UserModel.findById(req.header._id);
 if(user){
-        const materiel = await Materiel.find({ Like: true,user: req.params.userid })
+        const materiel = await Materiel.find({ status: "Recycled",user })
             .populate({ path: 'type', select: ['_id', 'type_name'] }).populate({ path: 'user', select: ['name'],model:UserModel} )
             ;
 
@@ -225,7 +225,6 @@ const editmateriel = async (req, res, next) => {
         });
     }
 };
-
 module.exports = {
     addmateriel,
     getAllmateriel,

@@ -36,9 +36,7 @@ app.get('*', function (req, res) {
     console.log('Enpoint does not exist.');
     res.status(404).send('Enpoint does not exist.');
 });
-
 const PORT = process.env.PORT || 3000;
-
 app.listen(
     PORT,
     console.log(`Server is connected in ${process.env.NODE_ENV} mode on port ${PORT}`.red)

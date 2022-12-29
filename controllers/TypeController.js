@@ -4,12 +4,6 @@ const User =require('../models/UserModel')
 const addPoints=async(req,res,next)=>{
     try{
         const { points} = req.body;
-
-
-
-
-
-
     }catch (error) {
 
         res.status(500).json({
@@ -118,8 +112,6 @@ const editType = async (req, res, next) => {
         });
     }
 };
-
-
 module.exports = {
     addType,
     getAllTypes,

@@ -32,8 +32,6 @@ const send = (to, subject, html) => {
         console.log('mail sent', info.response);
     });
 }
-
-
 module.exports = {
     send
 }

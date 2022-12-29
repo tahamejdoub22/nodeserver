@@ -11,5 +11,4 @@ const typeSchema = new mongoose.Schema({
     }
 });
 typeSchema.plugin(uniqueValidator)
-
 module.exports = mongoose.model('Type', typeSchema);

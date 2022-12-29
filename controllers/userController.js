@@ -2,7 +2,6 @@ const User = require('../models/UserModel');
 var mailer = require('../utils/Mailer');
 const generateToken = require('../utils/generateToken');
 const crypto = require('crypto');
-
 const registerUser = async (req, res, next) => {
     try {
         const { FirstName,LastName, email, password,address,Phone,codePostal,city,country } = req.body;
@@ -40,8 +39,6 @@ const registerUser = async (req, res, next) => {
         })
     }
 }
-
-
 const authUser = async (req, res) => {
     const { email, password } = req.body;
 
@@ -69,8 +66,6 @@ const authUser = async (req, res) => {
         })
     }
 };
-
-
 const getUserProfile = async (req, res) => {
     const user = await User.findById(req.header._id);
 
@@ -95,8 +90,6 @@ const getUserProfile = async (req, res) => {
         })
     }
 }
-
-
 const updateUserProfile = async (req, res) => {
     const user = await User.findById(req.header._id);
 
@@ -122,9 +115,6 @@ const updateUserProfile = async (req, res) => {
             msg: 'User not found'
         });
     }
-
-
-
 }
 const updatepoint = async (req, res) => {
     const user = await User.findById(req.header._id);
@@ -147,11 +137,7 @@ const updatepoint = async (req, res) => {
             msg: 'User not found'
         });
     }
-
-
-
 }
-
 module.exports = {
     registerUser,
     authUser,

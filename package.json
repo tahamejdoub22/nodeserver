@@ -1,0 +1,40 @@
+{
+  "name": "recyclageapp",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-form-data": "^2.0.17",
+    "jsonwebtoken": "^9.0.0",
+    "mime": "^1.6.0",
+    "mongoose-unique-validator": "^3.1.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.12",
+    "vercel": "^19.1.2"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "engines": {
+    "node": "18.12.1"
+  },
+  "keywords": [],
+  "author": "taha majdoub",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tahamejdoub22/nodeserver.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tahamejdoub22/nodeserver.git/issues"
+  },
+  "homepage": "https://github.com/tahamejdoub22/nodeserver.git#readme",
+  "description": "the backend of application mobile kotlin android",
+  "devDependencies": {}
+}

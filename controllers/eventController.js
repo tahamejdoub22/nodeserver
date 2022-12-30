@@ -5,7 +5,7 @@ const eventModel = require('../models/eventModel');
 // @desc -> Add event
 const addevent = async (req, res, next) => {
     try {
-        const { title, eventImage,description,snippet,lag,lat,user,img} = req.body;
+        const { title, eventImage,description,snippet,lag,lat,user} = req.body;
 
         const event = await eventModel.findOne({ title: title });
 
@@ -16,7 +16,7 @@ const addevent = async (req, res, next) => {
             });
         }
 
-        const new_event = await eventModel.create({ title,eventImage,description,snippet,lag,lat,user,img });
+        const new_event = await eventModel.create({ title,eventImage,description,snippet,lag,lat,user });
 
         res.status(200).json({
             new_event

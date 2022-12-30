@@ -10,10 +10,6 @@ const EventSchema = new mongoose.Schema({
             ref: 'User'
         },
 lag:Number,
-lat:Number,
-img: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'SingleFile'
-}
+lat:Number
 });
 module.exports = mongoose.model('event', EventSchema);

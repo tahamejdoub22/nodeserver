@@ -39,7 +39,7 @@ const getAllevent = async (req, res, next) => {
 
         const event = await eventModel.find({ 
 
-        }).populate({ path: 'user', select: ['name'],model:UserModel} ).populate({ path: 'img', select: ['fileName','filePath','fileType','fileSize'],model:fileModel} )
+        }).populate({ path: 'user', select: ['name'],model:UserModel} )
 
         res.json({
             event    })

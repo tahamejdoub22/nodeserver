@@ -19,16 +19,6 @@
               "src":"/api",
               "dest":"server.js"
             }
-                     ],
-                     "lib": [
-                      "ES2018",
-                      "ES2017",
-                      "es2020",
-                      "es3",
-                      "es5",
-                      "es6",
-                      "esnext",
-                      "es2015"
-                    ]
+                     ]
   }
   
